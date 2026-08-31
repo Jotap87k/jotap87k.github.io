@@ -109,6 +109,7 @@
     const duration = 900;
     const start = performance.now();
     const startVal = 0;
+    el.textContent = "0";
     const step = (now) => {
       const t = Math.min((now - start) / duration, 1);
       const eased = 1 - Math.pow(1 - t, 3);
@@ -128,7 +129,7 @@
         }
       });
     },
-    { threshold: 0.6 }
+    { threshold: 0.2, rootMargin: "0px 0px -10% 0px" }
   );
   counters.forEach((el) => counterIO.observe(el));
 
@@ -193,42 +194,9 @@
   }
 
   /* ---------------------------------------------------------
-     Cursor customizado (somente desktop, com hover reagindo)
+     Cursor customizado removido
   --------------------------------------------------------- */
   const isFinePointer = window.matchMedia("(pointer: fine)").matches;
-  if (isFinePointer && !prefersReducedMotion) {
-    const dot = document.getElementById("cursorDot");
-    const ring = document.getElementById("cursorRing");
-    let ringX = window.innerWidth / 2, ringY = window.innerHeight / 2;
-    let mouseX = ringX, mouseY = ringY;
-    let activated = false;
-
-    window.addEventListener("mousemove", (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      dot.style.left = mouseX + "px";
-      dot.style.top = mouseY + "px";
-      if (!activated) {
-        document.body.classList.add("cursor-ready");
-        activated = true;
-      }
-    });
-
-    const animateRing = () => {
-      ringX += (mouseX - ringX) * 0.18;
-      ringY += (mouseY - ringY) * 0.18;
-      ring.style.left = ringX + "px";
-      ring.style.top = ringY + "px";
-      requestAnimationFrame(animateRing);
-    };
-    animateRing();
-
-    const hoverables = document.querySelectorAll("a, button, .project-card, .service-card");
-    hoverables.forEach((el) => {
-      el.addEventListener("mouseenter", () => ring.classList.add("is-hover"));
-      el.addEventListener("mouseleave", () => ring.classList.remove("is-hover"));
-    });
-  }
 
   /* ---------------------------------------------------------
      Botões magnéticos (leve atração ao cursor)
