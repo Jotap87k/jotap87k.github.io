@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>João Pedro Gonzaga — Análise de Dados & TI</title>
+<meta name="description" content="Portfólio de João Pedro Gonzaga de Assis, estudante de Análise e Desenvolvimento de Sistemas em Salvador, com foco em análise de dados, Python, SQL, Power BI e automação.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="João Pedro Gonzaga — Análise de Dados & TI">
+<meta property="og:description" content="Estudante de ADS em Salvador. Transformo dados em decisões com Python, SQL e Power BI.">
+<meta property="og:locale" content="pt_BR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B0E14'/%3E%3Cpath d='M8 21V11l8 6 8-6v10' stroke='%23E8B54A' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+<!-- Barra de progresso de leitura -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- Cursor customizado (somente desktop, ligado via JS) -->
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<!-- ================= NAV ================= -->
+<header class="nav-wrap">
+  <nav class="nav-pill" id="navPill" aria-label="Navegação principal">
+    <a href="#top" class="nav-logo" aria-label="Ir para o início">
+      <span class="nav-logo-mark" aria-hidden="true">JP</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#experiencia">Experiência</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+
+    <a href="#contato" class="nav-cta">Contato</a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Menu mobile fullscreen -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#projetos">Projetos</a></li>
+    <li><a href="#experiencia">Experiência</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <div class="mobile-menu-foot">
+    <span>joaopedrotrabalho87k@gmail.com</span>
+    <span>Salvador — BA</span>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="top">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container hero-grid">
+
+      <div class="hero-copy">
+        <p class="eyebrow reveal" data-reveal>
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          Estudante de Análise e Desenvolvimento de Sistemas
+        </p>
+
+        <h1 class="hero-title">
+          <span class="reveal-line"><span class="reveal-word">Transformo</span></span>
+          <span class="reveal-line"><span class="reveal-word">dados</span> <span class="reveal-word">em</span></span>
+          <span class="reveal-line"><span class="reveal-word accent-text">decisões.</span></span>
+        </h1>
+
+        <p class="hero-sub reveal" data-reveal>
+          Sou João Pedro, estudante de ADS em Salvador (BA), buscando estágio em
+          <strong>Análise de Dados</strong> ou <strong>TI</strong>. Uso Python, SQL e Power BI
+          para transformar planilhas soltas em relatórios, dashboards e automações
+          que realmente ajudam alguém a decidir.
+        </p>
+
+        <div class="hero-actions reveal" data-reveal>
+          <a href="#projetos" class="btn btn-primary magnetic">
+            <span>Ver projetos</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#contato" class="btn btn-ghost magnetic">
+            <span>Entrar em contato</span>
+          </a>
+        </div>
+
+        <dl class="hero-stats reveal" data-reveal>
+          <div>
+            <dt>Ferramentas principais</dt>
+            <dd>Python · SQL · Power BI</dd>
+          </div>
+          <div>
+            <dt>Projetos pessoais</dt>
+            <dd data-counter="4">0</dd>
+          </div>
+          <div>
+            <dt>Base</dt>
+            <dd>Salvador — BA</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="hero-visual reveal" data-reveal>
+        <div class="data-card">
+          <div class="data-card-head">
+            <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+            <span class="data-card-title">consulta.sql</span>
+          </div>
+          <pre class="data-card-code" id="typeCode" aria-hidden="true"></pre>
+          <div class="data-card-chart" aria-hidden="true">
+            <div class="bar" style="--h:38%"></div>
+            <div class="bar" style="--h:62%"></div>
+            <div class="bar" style="--h:48%"></div>
+            <div class="bar" style="--h:81%"></div>
+            <div class="bar" style="--h:57%"></div>
+            <div class="bar" style="--h:94%"></div>
+            <div class="bar" style="--h:70%"></div>
+          </div>
+        </div>
+        <div class="float-chip chip-1" aria-hidden="true">
+          <span class="chip-label">status</span>
+          <span class="chip-value">disponível p/ estágio</span>
+        </div>
+        <div class="float-chip chip-2" aria-hidden="true">
+          <span class="chip-label">stack</span>
+          <span class="chip-value">Python · Power BI</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="scroll-cue" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- ================= SOBRE ================= -->
+  <section class="section" id="sobre">
+    <div class="container about-grid">
+
+      <div class="about-visual reveal" data-reveal>
+        <div class="avatar-frame">
+          <div class="avatar-initials" aria-hidden="true">JP</div>
+        </div>
+        <p class="avatar-note">[FOTO: substitua por uma foto sua em assets/img/avatar.jpg]</p>
+      </div>
+
+      <div class="about-copy">
+        <p class="eyebrow reveal" data-reveal><span class="eyebrow-dot" aria-hidden="true"></span>Sobre mim</p>
+        <h2 class="section-title reveal" data-reveal>Curiosidade por números, disciplina de quem vem da técnica.</h2>
+
+        <p class="reveal" data-reveal>
+          Comecei pelo Técnico em Mecatrônica no SENAI, onde aprendi a pensar em processos e
+          lógica antes de escrever a primeira linha de código. Hoje curso Análise e Desenvolvimento
+          de Sistemas na UNIJORGE e uso esse raciocínio técnico para trabalhar com dados: tratar,
+          consultar e visualizar informação até ela virar uma decisão clara.
+        </p>
+        <p class="reveal" data-reveal>
+          Na Segur Pro, atuo como Jovem Aprendiz extraindo e organizando dados de dashboards em
+          Power BI, conferindo planilhas e apoiando a montagem de relatórios internos — na prática,
+          garantindo que os números que chegam até quem decide estejam certos.
+        </p>
+
+        <ul class="about-highlights reveal" data-reveal>
+          <li>Facilidade de aprendizado e proatividade na resolução de problemas</li>
+          <li>Forte interesse em análise de dados e tecnologia</li>
+          <li>Boa organização e atenção a detalhes</li>
+        </ul>
+
+        <div class="about-stats">
+          <div class="about-stat reveal" data-reveal>
+            <span class="about-stat-num" data-counter="4">0</span>
+            <span class="about-stat-label">projetos pessoais</span>
+          </div>
+          <div class="about-stat reveal" data-reveal>
+            <span class="about-stat-num" data-counter="3">0</span>
+            <span class="about-stat-label">trilhas de formação</span>
+          </div>
+          <div class="about-stat reveal" data-reveal>
+            <span class="about-stat-num" data-counter="2022">0</span>
+            <span class="about-stat-label">início na área técnica</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= PROJETOS ================= -->
+  <section class="section section-alt" id="projetos">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal" data-reveal><span class="eyebrow-dot" aria-hidden="true"></span>Projetos</p>
+        <h2 class="section-title reveal" data-reveal>Projetos pessoais</h2>
+        <p class="section-lead reveal" data-reveal>
+          Estudos práticos que venho construindo fora da sala de aula — cada um focado em
+          resolver um problema real de dados ou automação.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project-card project-card--feature reveal" data-reveal>
+          <div class="project-visual" aria-hidden="true">
+            <svg viewBox="0 0 400 240" class="mock mock-chat">
+              <rect x="0" y="0" width="400" height="240" rx="16" fill="var(--surface-2)"/>
+              <rect x="24" y="24" width="220" height="34" rx="17" fill="var(--border-soft)"/>
+              <rect x="40" y="36" width="100" height="10" rx="5" fill="var(--text-faint)"/>
+              <rect x="150" y="76" width="226" height="40" rx="18" fill="var(--accent-soft)"/>
+              <rect x="168" y="90" width="150" height="12" rx="6" fill="var(--accent)"/>
+              <rect x="24" y="134" width="200" height="40" rx="18" fill="var(--border-soft)"/>
+              <rect x="42" y="148" width="120" height="12" rx="6" fill="var(--text-muted)"/>
+              <rect x="150" y="192" width="226" height="34" rx="17" fill="var(--accent-soft)"/>
+              <rect x="168" y="204" width="90" height="10" rx="5" fill="var(--accent)"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="tag">Automação</span>
+              <span class="project-cat">Projeto principal</span>
+            </div>
+            <h3>Bot de Agendamento com IA via WhatsApp</h3>
+            <p>Automação de atendimento, agendamentos e gerenciamento de clientes direto pelo
+              WhatsApp, reduzindo o trabalho manual de marcar e confirmar horários.</p>
+            <div class="project-stack">
+              <span>Python</span><span>WhatsApp API</span><span>IA / NLP</span><span>Automação</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="Ver projeto (link a definir)">Ver projeto <span>↗</span></a>
+              <a href="https://github.com/Jotap87k" target="_blank" rel="noopener" class="project-link project-link--muted" aria-label="Ver perfil no GitHub">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-reveal>
+          <div class="project-visual" aria-hidden="true">
+            <svg viewBox="0 0 400 200" class="mock mock-bi">
+              <rect width="400" height="200" rx="16" fill="var(--surface-2)"/>
+              <circle cx="90" cy="100" r="52" fill="none" stroke="var(--border)" stroke-width="14"/>
+              <circle cx="90" cy="100" r="52" fill="none" stroke="var(--accent)" stroke-width="14" stroke-dasharray="240 327" stroke-linecap="round" transform="rotate(-90 90 100)"/>
+              <rect x="188" y="52" width="188" height="14" rx="7" fill="var(--border-soft)"/>
+              <rect x="188" y="52" width="120" height="14" rx="7" fill="var(--accent-2)"/>
+              <rect x="188" y="82" width="188" height="14" rx="7" fill="var(--border-soft)"/>
+              <rect x="188" y="82" width="80" height="14" rx="7" fill="var(--accent)"/>
+              <rect x="188" y="112" width="188" height="14" rx="7" fill="var(--border-soft)"/>
+              <rect x="188" y="112" width="150" height="14" rx="7" fill="var(--accent-2)"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="tag">Business Intelligence</span>
+            </div>
+            <h3>Dashboard Interativo em Power BI</h3>
+            <p>Visualização de dados, KPIs e indicadores estratégicos organizados em um
+              painel único para apoiar a tomada de decisão.</p>
+            <div class="project-stack">
+              <span>Power BI</span><span>DAX</span><span>Modelagem de dados</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">Ver projeto <span>↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-reveal>
+          <div class="project-visual" aria-hidden="true">
+            <svg viewBox="0 0 400 200" class="mock mock-sql">
+              <rect width="400" height="200" rx="16" fill="var(--surface-2)"/>
+              <rect x="20" y="24" width="360" height="26" rx="6" fill="var(--border-soft)"/>
+              <rect x="20" y="58" width="360" height="1" fill="var(--border)"/>
+              <rect x="34" y="72" width="60" height="10" rx="5" fill="var(--text-faint)"/>
+              <rect x="140" y="72" width="90" height="10" rx="5" fill="var(--text-faint)"/>
+              <rect x="270" y="72" width="70" height="10" rx="5" fill="var(--text-faint)"/>
+              <rect x="34" y="98" width="60" height="10" rx="5" fill="var(--accent)"/>
+              <rect x="140" y="98" width="90" height="10" rx="5" fill="var(--text-muted)"/>
+              <rect x="270" y="98" width="70" height="10" rx="5" fill="var(--text-muted)"/>
+              <rect x="34" y="124" width="60" height="10" rx="5" fill="var(--accent)"/>
+              <rect x="140" y="124" width="90" height="10" rx="5" fill="var(--text-muted)"/>
+              <rect x="270" y="124" width="70" height="10" rx="5" fill="var(--text-muted)"/>
+              <rect x="34" y="150" width="60" height="10" rx="5" fill="var(--accent-2)"/>
+              <rect x="140" y="150" width="90" height="10" rx="5" fill="var(--text-muted)"/>
+              <rect x="270" y="150" width="70" height="10" rx="5" fill="var(--text-muted)"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="tag">Dados</span>
+            </div>
+            <h3>Análise de Dados com SQL</h3>
+            <p>Consultas, tratamento e análise de grandes bases de dados para geração de
+              insights, do <code>SELECT</code> ao <code>GROUP BY</code>.</p>
+            <div class="project-stack">
+              <span>SQL</span><span>Tratamento de dados</span><span>Insights</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">Ver projeto <span>↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-reveal>
+          <div class="project-visual" aria-hidden="true">
+            <svg viewBox="0 0 400 200" class="mock mock-saas">
+              <rect width="400" height="200" rx="16" fill="var(--surface-2)"/>
+              <polyline points="24,150 90,110 150,130 210,70 270,90 340,40 376,55" fill="none" stroke="var(--accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <polyline points="24,150 90,110 150,130 210,70 270,90 340,40 376,55" fill="url(#g1)" stroke="none" opacity="0.25"/>
+              <defs>
+                <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="var(--accent)"/>
+                  <stop offset="1" stop-color="var(--accent)" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <rect x="24" y="24" width="80" height="18" rx="9" fill="var(--border-soft)"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="tag">Plataforma Web</span>
+            </div>
+            <h3>SaaS de Consultoria Financeira</h3>
+            <p>Plataforma web para gestão financeira, análise de dados e suporte à tomada
+              de decisões de clientes.</p>
+            <div class="project-stack">
+              <span>Python</span><span>SQL</span><span>Dashboards web</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">Ver projeto <span>↗</span></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIÊNCIA + FORMAÇÃO ================= -->
+  <section class="section" id="experiencia">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal" data-reveal><span class="eyebrow-dot" aria-hidden="true"></span>Trajetória</p>
+        <h2 class="section-title reveal" data-reveal>Experiência & formação</h2>
+      </div>
+
+      <ol class="timeline">
+        <li class="timeline-item reveal" data-reveal>
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2025 — atual</span>
+            <h3>Jovem Aprendiz · Assistente Administrativo</h3>
+            <span class="timeline-org">Segur Pro</span>
+            <ul>
+              <li>Extração e organização de planilhas a partir de dashboards no Power BI</li>
+              <li>Atualização e conferência de dados, garantindo consistência das informações</li>
+              <li>Apoio na elaboração de relatórios internos para as áreas administrativa e operacional</li>
+              <li>Suporte às rotinas administrativas e operacionais do setor</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="timeline-item reveal" data-reveal>
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2025 — 2027</span>
+            <h3>Análise e Desenvolvimento de Sistemas</h3>
+            <span class="timeline-org">UNIJORGE · cursando</span>
+          </div>
+        </li>
+
+        <li class="timeline-item reveal" data-reveal>
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2022 — 2024</span>
+            <h3>Técnico em Mecatrônica</h3>
+            <span class="timeline-org">SENAI · Salvador — BA</span>
+          </div>
+        </li>
+
+        <li class="timeline-item reveal" data-reveal>
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2022 — 2024</span>
+            <h3>Ensino Médio</h3>
+            <span class="timeline-org">Escola SESI Djalma Pessoa · Salvador — BA</span>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal" data-reveal><span class="eyebrow-dot" aria-hidden="true"></span>Skills</p>
+        <h2 class="section-title reveal" data-reveal>Ferramentas que uso no dia a dia</h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-group reveal" data-reveal>
+          <h3>Dados</h3>
+          <div class="skill-bar">
+            <div class="skill-bar-head"><span>Python <small>(Pandas, NumPy, Matplotlib)</small></span></div>
+            <div class="skill-track"><div class="skill-fill" style="--p:78%"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-head"><span>SQL <small>(SELECT, JOIN, WHERE, GROUP BY)</small></span></div>
+            <div class="skill-track"><div class="skill-fill" style="--p:74%"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-head"><span>Power BI</span></div>
+            <div class="skill-track"><div class="skill-fill" style="--p:80%"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-group reveal" data-reveal>
+          <h3>Programação</h3>
+          <div class="skill-bar">
+            <div class="skill-bar-head"><span>Lógica de programação</span></div>
+            <div class="skill-track"><div class="skill-fill" style="--p:75%"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-head"><span>HTML, CSS &amp; JavaScript <small>(básico)</small></span></div>
+            <div class="skill-track"><div class="skill-fill" style="--p:45%"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-group skill-group--terminal reveal" data-reveal>
+          <h3>Idiomas</h3>
+          <div class="skill-bar">
+            <div class="skill-bar-head"><span>Inglês <small>(básico / intermediário)</small></span></div>
+            <div class="skill-track"><div class="skill-fill" style="--p:55%"></div></div>
+          </div>
+
+          <div class="mini-terminal" aria-hidden="true">
+            <div class="mini-terminal-head">
+              <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+              <span>query.sql</span>
+            </div>
+            <pre>SELECT nome, foco
+FROM candidato
+WHERE stack IN ('Python','SQL','Power BI')
+  AND disponibilidade = 'estágio';</pre>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVIÇOS ================= -->
+  <section class="section" id="servicos">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal" data-reveal><span class="eyebrow-dot" aria-hidden="true"></span>Como posso ajudar</p>
+        <h2 class="section-title reveal" data-reveal>O que eu posso oferecer</h2>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal" data-reveal>
+          <h3>Análise de dados</h3>
+          <p>Tratamento, limpeza e exploração de bases em Python e SQL para transformar
+            dados soltos em respostas claras.</p>
+        </div>
+        <div class="service-card reveal" data-reveal>
+          <h3>Dashboards em Power BI</h3>
+          <p>Construção de painéis e relatórios interativos com KPIs pensados para quem
+            vai usar o dado no dia a dia.</p>
+        </div>
+        <div class="service-card reveal" data-reveal>
+          <h3>Automação de processos</h3>
+          <p>Scripts e bots (como automações via WhatsApp) para tirar tarefas repetitivas
+            da rotina manual.</p>
+        </div>
+        <div class="service-card reveal" data-reveal>
+          <h3>Suporte em TI</h3>
+          <p>Base sólida em lógica, organização de planilhas e rotinas administrativas
+            para times de dados e operações.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTATO ================= -->
+  <section class="section contact-section" id="contato">
+    <div class="container">
+      <div class="contact-box reveal" data-reveal>
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Contato</p>
+        <h2 class="section-title">Tem uma vaga de estágio ou um projeto de dados? Vamos conversar.</h2>
+        <p class="section-lead">Respondo rápido por e-mail ou WhatsApp — pode chamar.</p>
+
+        <div class="contact-links">
+          <a href="mailto:joaopedrotrabalho87k@gmail.com" class="contact-link">
+            <span class="contact-link-label">E-mail</span>
+            <span class="contact-link-value">joaopedrotrabalho87k@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/joaopedroo87k/" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-link-label">LinkedIn</span>
+            <span class="contact-link-value">linkedin.com/in/joaopedroo87k</span>
+          </a>
+          <a href="https://wa.me/5571984835051" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-link-label">WhatsApp</span>
+            <span class="contact-link-value">(71) 98483-5051</span>
+          </a>
+          <a href="tel:+5571984835051" class="contact-link">
+            <span class="contact-link-label">Telefone</span>
+            <span class="contact-link-value">(71) 98483-5051</span>
+          </a>
+          <a href="https://github.com/Jotap87k" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-link-label">GitHub</span>
+            <span class="contact-link-value">github.com/Jotap87k</span>
+          </a>
+        </div>
+
+        <div class="contact-cta-row">
+          <a href="https://wa.me/5571984835051" target="_blank" rel="noopener" class="btn btn-primary magnetic contact-cta">
+            <span>Chamar no WhatsApp</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="mailto:joaopedrotrabalho87k@gmail.com" class="btn btn-ghost magnetic contact-cta">
+            <span>Enviar e-mail</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>João Pedro Gonzaga de Assis</span>
+    <span>Salvador — BA · <span id="year"></span></span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
