@@ -160,7 +160,7 @@
         <!-- Para trocar por foto real: coloque o arquivo em assets/img/avatar.jpg e troque a
              div .avatar-initials abaixo por: <img src="assets/img/avatar.jpg" alt="Foto de João Pedro"> -->
         <div class="avatar-frame">
-          <img src="assets/img/avatar.jpg" alt="Foto de João Pedro" class="avatar">
+          <img src="assets/img/avatar.jpg" alt="Foto de João Pedro" class="avatar" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="avatar-fallback" style="display:none;"><span>JP</span></div>
         </div>
       </div>
 
